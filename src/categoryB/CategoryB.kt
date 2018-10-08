@@ -174,9 +174,7 @@ fun taskB3() {
         val listOfNeighbors = mutableListOf<Pair<Int, Int>>()
 
         if (x + 1 < n) listOfNeighbors.add(Pair(x + 1, y))
-        if (x - 1 >= 0) listOfNeighbors.add(Pair(x - 1, y))
         if (y + 1 < n) listOfNeighbors.add(Pair(x, y + 1))
-        if (y - 1 >= 0) listOfNeighbors.add(Pair(x, y - 1))
 
         return listOfNeighbors
     }
@@ -225,7 +223,7 @@ fun taskB3() {
             if (x == 0 && y == 0) print("A  ")
             else if (x == n - 1 && y == n - 1) print("B  ")
             else if (Pair(x, y) in path) print("*  ")
-            else if (source[x][y] < 10) print(source[x][y].toString() + " ")
+            else if (source[x][y] < 10) print(source[x][y].toString() + "  ")
             else  print(source[x][y].toString() + " ")
         }
         println()
